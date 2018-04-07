@@ -8,9 +8,9 @@
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/material-design-book.jpg",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/material-design-book.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

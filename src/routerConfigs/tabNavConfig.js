@@ -25,11 +25,13 @@ export const RootStack = TabNavigator(
             style: {
                 backgroundColor: '#fe7a7a',
             },
-            // labelStyle: {},
+            labelStyle: {
+                fontFamily: 'sans-serif'
+            },
             allowFontScaling: true,
           },
         initialRouteName: 'Home',
-        lazyLoad: false,
+        lazyLoad: true,
         tabBarPosition: 'bottom',
         animationEnabled: true,
         swipeEnabled: true,

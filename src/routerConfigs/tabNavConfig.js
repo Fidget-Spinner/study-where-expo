@@ -14,6 +14,20 @@ export const RootStack = TabNavigator(
         },
     },
     {
+        tabBarOptions: {
+            activeBackgroundColor: '#fe7a7a',
+            inactiveBackgroundColor: '#fc9d9d',
+            activeTintColor: 'white',
+            inactiveTintColor: '#fc9d9d',
+            indicatorStyle: {
+                backgroundColor: 'white'
+            },
+            style: {
+                backgroundColor: '#fe7a7a',
+            },
+            // labelStyle: {},
+            allowFontScaling: true,
+          },
         initialRouteName: 'Home',
         lazyLoad: false,
         tabBarPosition: 'bottom',

@@ -3,6 +3,7 @@ import { TabNavigator } from 'react-navigation';
 
 import Main from '../components/screens/Home/Main';
 import GMap from '../components/screens/Maps/GMap';
+import { GLOBALS } from '../Globals';
 
 export const RootStack = TabNavigator(
     {
@@ -15,18 +16,18 @@ export const RootStack = TabNavigator(
     },
     {
         tabBarOptions: {
-            // activeBackgroundColor: '#fe7a7a',
+            // activeBackgroundColor: GLOBALS.COLORS.P,
             // inactiveBackgroundColor: '#fc9d9d',
-            activeTintColor: 'white',
-            inactiveTintColor: '#e2e2e2',
+            activeTintColor: GLOBALS.COLORS.ACTIVE,
+            inactiveTintColor: GLOBALS.COLORS.INACTIVE,
             indicatorStyle: {
-                backgroundColor: 'white'
+                backgroundColor: GLOBALS.COLORS.ACTIVE
             },
             style: {
-                backgroundColor: '#fe7a7a',
+                backgroundColor: GLOBALS.COLORS.PRIMARY,
             },
             labelStyle: {
-                fontFamily: 'sans-serif'
+                fontFamily: GLOBALS.HEADER1
             },
             allowFontScaling: true,
           },

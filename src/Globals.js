@@ -1,18 +1,20 @@
+// FOR DEFINING PROJECT GLOBAL DESIGN THEMES
+
 export const GLOBALS = {
-    COLOR: {
+    COLORS: {
         //P means primary, L isr light, D is dark
         //S is secondary
-        P: '#fe7a7a',
-        PL: '#fc9d9d',
-        PD: '#e66b6b',
-        S: '#ffcfcf',
-        SL: '#febdbd',
-        SD: '#ffdbdb',
+        PRIMARY: '#fe7a7a',
+        PLIGHT: '#fc9d9d',
+        PDARK: '#e66b6b',
+        SECONDARY: '#ffcfcf',
+        SLIGHT: '#febdbd',
+        SDARK: '#ffdbdb',
 
         //Text, I is inactive, A is active
-        T: '#000000',
-        TA: '#ffffff',
-        TI: '#e2e2e2'
+        TEXT: '#000000',
+        ACTIVE: '#ffffff',
+        INACTIVE: '#e2e2e2'
     },
     FONT: {
         HEADER1: 'sans-serif',

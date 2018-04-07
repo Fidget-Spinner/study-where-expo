@@ -18,7 +18,7 @@ export const RootStack = TabNavigator(
             // activeBackgroundColor: '#fe7a7a',
             // inactiveBackgroundColor: '#fc9d9d',
             activeTintColor: 'white',
-            inactiveTintColor: '#fc9d9d',
+            inactiveTintColor: '#e2e2e2',
             indicatorStyle: {
                 backgroundColor: 'white'
             },

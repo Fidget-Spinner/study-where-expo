@@ -17,7 +17,15 @@ class GMap extends Component {
                         latitudeDelta: 0.02,
                         longitudeDelta: 0.04,
                     }}
-                />
+                >
+                    <MapView.Marker 
+                        title="Home"
+                        coordinate={{
+                            latitude: 1.346706,
+                            longitude: 103.842016,
+                        }}
+                    />
+                </MapView>
             </View>
         );
     }

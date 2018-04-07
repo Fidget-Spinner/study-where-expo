@@ -14,7 +14,7 @@ export const GLOBALS = {
         //Text, I is inactive, A is active
         TEXT: '#000000',
         ACTIVE: '#ffffff',
-        INACTIVE: '#e2e2e2'
+        INACTIVE: '#f5f5f5'
     },
     FONT: {
         HEADER1: 'sans-serif',

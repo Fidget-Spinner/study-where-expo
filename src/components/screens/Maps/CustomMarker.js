@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { MapView } from 'expo';
 
 import { GLOBALS } from '../../../Globals';
+//This component controls how all markers look
 
 const CustomMarker = (props) => { 
   return (

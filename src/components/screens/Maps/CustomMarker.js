@@ -12,8 +12,11 @@ const CustomMarker = (props) => {
       title={props.marker.title}
       description={props.marker.description}
     >
+      {/* Ring design of marker */}
       <View style={styles.markerView}>
-        <View style={styles.markerRing} />
+        <View style={styles.markerRing}>
+          {/* Insert things inside here to include stuff in marker */}
+        </View>
       </View>
     </MapView.Marker>
   );
@@ -21,10 +24,10 @@ const CustomMarker = (props) => {
 
 const styles = StyleSheet.create({
   markerView: {
-    backgroundColor: GLOBALS.COLORS.PDARK,
-    width: 20,
-    height: 20,
-    borderRadius: 10,
+    backgroundColor: GLOBALS.COLORS.PLIGHT,
+    width: 12,
+    height: 12,
+    borderRadius: 6,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 1

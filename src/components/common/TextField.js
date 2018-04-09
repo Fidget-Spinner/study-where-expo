@@ -3,11 +3,11 @@ import { TextInput, View, Text } from 'react-native';
 
 const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
     // pass in props.label, this is in destructured form...
-    const { inputStyle, labelStyle, containerStyle } = styles;
+    const { input, labels, container } = styles;
     //again more ES6 destructuring
     return (
-        <View style={containerStyle}>
-            <Text style={labelStyle}>{label}</Text>
+        <View style={container}>
+            <Text style={labels}>{label}</Text>
             <TextInput
                 secureTextEntry={secureTextEntry}
                 //same meaning as this.props.secureTextEntry
@@ -18,7 +18,7 @@ const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry })
                 //defined and also has a value, therefore it is now truthy
                 autoCorrect={false}
                 placeholder={placeholder}
-                style={inputStyle}
+                style={input}
                 value={value}
                 onChangeText={onChangeText}
                 //takes in the props.value and props.onChangeText that is
@@ -31,7 +31,7 @@ const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry })
 };
 
 const styles = {
-    inputStyle: {
+    input: {
         color: '#000',
         paddingRight: 5,
         paddingLeft: 5,
@@ -39,13 +39,13 @@ const styles = {
         lineHeight: 23,
         flex: 2
     },
-    labelStyle: {
+    labels: {
         fontSize: 18,
         paddingLeft: 20,
         flex: 1,
         fontWeight: 'bold'
     },
-    containerStyle: {
+    container: {
         height: 40,
         flex: 1,
         flexDirection: 'row',

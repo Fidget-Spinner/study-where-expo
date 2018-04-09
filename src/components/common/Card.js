@@ -3,7 +3,7 @@ import { View, } from 'react-native';
 
 const Card = (props) => {
     return (
-        <View style={styles.containerStyle}>
+        <View style={styles.container}>
             {props.children}
             {// props.children refers to the child component of any props that is passed in to
             // Card tag/component
@@ -17,7 +17,7 @@ const Card = (props) => {
 
 
 const styles = {
-    containerStyle: {
+    container: {
         borderWidth: 1,
         borderRadius: 2,
         borderColor: '#ddd',

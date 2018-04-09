@@ -4,11 +4,13 @@ import { TextInput, View, Text } from 'react-native';
 const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
     // pass in props.label, this is in destructured form...
     const { inputStyle, labelStyle, containerStyle } = styles;
+    //again more ES6 destructuring
     return (
         <View style={containerStyle}>
             <Text style={labelStyle}>{label}</Text>
             <TextInput
                 secureTextEntry={secureTextEntry}
+                //same meaning as this.props.secureTextEntry
                 //this is pretty interesting, secureTextEntry is set to undefined
                 //by default which is a falsy in JSX, therefore by default it is false
                 // however to initialise as true, instead of secureTextEntry={true},

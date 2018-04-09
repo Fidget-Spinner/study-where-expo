@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
     View,
     StyleSheet,
-    Text
+    //Text
   } from 'react-native';
 import { MapView, Constants } from 'expo';
 
@@ -26,8 +26,8 @@ class GMap extends Component {
         },
         {
           latlng: {
-            latitude: 1.350789,
-            longitude: 103.870933,
+            latitude: 1.31,
+            longitude: 10.842016,
           },
           title: 'marker1',
           description: 'desc2',
@@ -40,7 +40,8 @@ class GMap extends Component {
     return (
       <View style={styles.container}>
         {/* DEBUG VIEW: */}
-        {/* <View style={{ width: 150, height: 400, top: 10, left: 10, zIndex: 3, position: 'absolute' }}>
+        {/* <View style={{ width: 150,
+        height: 400, top: 10, left: 10, zIndex: 3, position: 'absolute' }}>
           {this.state.markers.map((marker, key) => (
             <Text key={key}>
               coordinate={[marker.latlng.latitude, marker.latlng.longitude]}{'\n'}

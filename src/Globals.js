@@ -11,10 +11,12 @@ export const GLOBALS = {
         SLIGHT: '#febdbd',
         SDARK: '#ffdbdb',
 
+        BACKGROUND: '#e9e9e8',
         //Text, I is inactive, A is active
         TEXT: '#000000',
         ACTIVE: '#ffffff',
         INACTIVE: '#f5f5f5'
+        
     },
     FONT: {
         HEADER1: 'sans-serif',

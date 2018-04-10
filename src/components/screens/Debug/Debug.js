@@ -4,14 +4,18 @@ import {
   View,
 } from 'react-native';
 
+import { Card } from '../../common';
+
 class Debug extends Component {
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <View>
-          <Text style={{ fontSize: 15 }} >
+          <Card style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ fontSize: 15 }} >
             DEBUG:
-          </Text>
+            </Text>
+          </Card>
         </View>
       </View>
     );

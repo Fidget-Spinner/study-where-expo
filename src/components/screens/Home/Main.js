@@ -5,6 +5,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { Card } from '../../common/Card';
 
 //Main Page Component
 const instructions = Platform.select({
@@ -18,9 +19,11 @@ class Main extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hi
-        </Text>
+        <Card>  
+          <Text style={styles.welcome}>
+            Hi this is me
+          </Text>
+        </Card>
         <Text style={styles.instructions}>
           To get started, edit App.js
         </Text>

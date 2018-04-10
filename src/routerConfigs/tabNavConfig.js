@@ -3,6 +3,8 @@ import { TabNavigator } from 'react-navigation';
 
 import Main from '../components/screens/Home/Main';
 import GMap from '../components/screens/Maps/GMap';
+//comment out when not testing components on this screen
+import Debug from '../components/screens/Debug/Debug';
 import { GLOBALS } from '../Globals';
 
 export const RootStack = TabNavigator(
@@ -12,6 +14,10 @@ export const RootStack = TabNavigator(
     },
     Map: {
       screen: GMap,
+    },
+    //comment out when not testing components on this screen
+    ComponentTester: {
+      screen: Debug
     },
   },
   {

@@ -1,11 +1,9 @@
 import React from 'react';
 import { View, } from 'react-native';
 
-import { GLOBALS } from '../../Globals';
-
 const Card = (props) => {
   return (
-    <View style={styles.container}>
+    <View style={{ backgroundColor: props.color, ...styles.container }}>
       {props.children}
     </View>
   );
@@ -14,9 +12,8 @@ const Card = (props) => {
 
 const styles = {
   container: {
-    backgroundColor: GLOBALS.COLORS.PLIGHT,
-    padding: 2
-  },
+    padding: 10
+  }
 };
 
 export { Card };

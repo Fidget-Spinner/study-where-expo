@@ -4,9 +4,9 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
+//  Button,
 } from 'react-native';
-import firebase from 'firebase';
+//import firebase from 'firebase';
 import { Card } from '../../common/Card';
 //Main Page Component
 const instructions = Platform.select({
@@ -25,17 +25,17 @@ class Main extends Component {
   }
 
     // test method for reading data from firebase DB
-    readTestData() {
-      firebase.database().ref('/locations/').once('value')
-      .then(snapshot => {
-          const testValue = snapshot.val() || 'no value present';
-          console.log('FIREBASEDEBUG1');
-          console.log(snapshot.val().toString, snapshot.val().test.lat);
-          console.log(testValue.key, testValue.value);
-          this.setState({ testValue: snapshot.val().test.lat });
-        })
-      .catch(error => console.log('FIREBASEDEBUGERROR', error.toSTring));
-    }
+    // readTestData() {
+    //   firebase.database().ref('/locations/').once('value')
+    //   .then(snapshot => {
+    //       const testValue = snapshot.val() || 'no value present';
+    //       console.log('FIREBASEDEBUG1');
+    //       console.log(snapshot.val().toString, snapshot.val().test.lat);
+    //       console.log(testValue.key, testValue.value);
+    //       this.setState({ testValue: snapshot.val().test.lat });
+    //     })
+    //   .catch(error => console.log('FIREBASEDEBUGERROR', error.toSTring));
+    // }
 
   render() {
     return (
@@ -45,13 +45,13 @@ class Main extends Component {
             Hi this is me
           </Text>
         </Card>
-        <Button
+        {/* <Button
           onPress={this.readTestData}
           title='Press this to test for read from firebase db' 
         />
         <Text style={styles.instructions} >
           Firebase Debug: {this.state.testValue}
-        </Text>
+        </Text> */}
         <Text style={styles.instructions}>
           {instructions}
         </Text>

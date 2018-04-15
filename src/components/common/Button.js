@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { GLOBALS } from '../../Globals';
 
@@ -18,10 +18,10 @@ class Button extends Component {
   render() {
       return (
           <View style={styles.container}>
-              <TouchableOpacity onPress={this.onPressButton}>
-                  <Text style={styles.inButton}>
-                      {this.props.content}
-                  </Text>  
+              <TouchableOpacity onPress={this.props.onPress}>
+                  <View>
+                    {this.props.children}
+                  </View> 
               </TouchableOpacity>
           </View>
       );

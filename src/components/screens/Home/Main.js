@@ -4,9 +4,10 @@ import {
   StyleSheet,
   Text,
   View,
+  Button,
 } from 'react-native';
+import firebase from 'firebase';
 import { Card } from '../../common/Card';
-
 //Main Page Component
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -16,6 +17,26 @@ const instructions = Platform.select({
 });
 
 class Main extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { testValue: 0 };
+    this.readTestData = this.readTestData.bind(this);
+  }
+
+    // test method for reading data from firebase DB
+    readTestData() {
+      firebase.database().ref('/locations/').once('value')
+      .then(snapshot => {
+          const testValue = snapshot.val() || 'no value present';
+          console.log('FIREBASEDEBUG1');
+          console.log(snapshot.val().toSTring, snapshot.val().test.lat);
+          console.log(testValue.key, testValue.value);
+          this.setState({ testValue: snapshot.val().test.lat });
+        })
+      .catch(error => console.log('FIREBASEDEBUGERROR', error.toSTring));
+    }
+
   render() {
     return (
       <View style={styles.container}>
@@ -24,8 +45,12 @@ class Main extends Component {
             Hi this is me
           </Text>
         </Card>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
+        <Button
+          onPress={this.readTestData}
+          title='Press this to test for read from firebase db' 
+        />
+        <Text style={styles.instructions} >
+          Firebase Debug: {this.state.testValue}
         </Text>
         <Text style={styles.instructions}>
           {instructions}

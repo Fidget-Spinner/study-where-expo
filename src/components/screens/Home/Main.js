@@ -21,7 +21,8 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = { testValue: 0 };
-    this.readTestData = this.readTestData.bind(this);
+    
+    // this.readTestData = this.readTestData.bind(this);
   }
 
     // test method for reading data from firebase DB

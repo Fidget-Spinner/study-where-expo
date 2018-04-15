@@ -17,7 +17,11 @@ class Debug extends Component {
             HI
           </Text>  
         </Card>
-        <Button content='login' onPress={console.log('BUTTONPRESS')} />
+        <Button onPress={console.log('BUTTONPRESS')}>
+          <Text>
+            Login
+          </Text>
+        </Button>
       </View>
     );
   }

@@ -2,7 +2,7 @@
 
 export const GLOBALS = {
     COLORS: {
-        //P means primary, L isr light, D is dark
+        //P means primary, L is light, D is dark
         //S is secondary
         PRIMARY: '#fe7a7a',
         PLIGHT: '#fc9d9d',

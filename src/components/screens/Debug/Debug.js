@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   View,
+  Text,
   StyleSheet,
 } from 'react-native';
 
@@ -11,8 +12,12 @@ class Debug extends Component {
   render() {
     return (
       <View style={styles.mainbackground}>
-        <Card style={styles.card1} color={GLOBALS.COLORS.PRIMARY} text='DEBUG' />
-        <Button />
+        <Card style={styles.card1} color={GLOBALS.COLORS.PRIMARY}>
+          <Text style={styles.word}>
+            HI
+          </Text>  
+        </Card>
+        <Button content='login' />
       </View>
     );
   }
@@ -29,6 +34,10 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     alignItems: 'center'
+  },
+  word: {
+    fontSize: 14, 
+    fontFamily: GLOBALS.FONT.TEXT1,
   }
 });
 

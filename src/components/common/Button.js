@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableHighlight, Alert, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { GLOBALS } from '../../Globals';
 
@@ -10,38 +10,33 @@ class Button extends Component {
           pressed: false
       };
   }
-  onPressButton = (message) => {
+  onPressButton = () => {
       //onPressButton is a function that is created with each
       // button instance
       this.setState({ pressed: true }); 
-      Alert.alert(message);
   }; 
   render() {
       return (
-          <View style={{ flex: 1 }}>
-              <TouchableHighlight onPress={this.onPressButton(this.props.message)}>
-                  <Text style={{ fontSize: 10, color: this.state.pressed ? 'green' : 'red' }}>
+          <View style={styles.container}>
+              <TouchableOpacity onPress={this.onPressButton}>
+                  <Text style={styles.inButton}>
                       {this.props.content}
                   </Text>  
-              </TouchableHighlight>
+              </TouchableOpacity>
           </View>
       );
   }
 }
 
 const styles = StyleSheet.create({
-  disabledButton: {
-    color: GLOBALS.COLORS.PLIGHT
+  inButton: {
+    fontSize: 30,
+    fontFamily: GLOBALS.FONT.TEXT1, 
   },
-  disabledText: {
-    color: GLOBALS.COLORS.INACTIVE
-  },
-  enabledButton: {
-    color: GLOBALS.COLORS.PRIMARY
-  },
-  enabledText: {
-    color: GLOBALS.COLORS.ACTIVE
+  container: {
+    backgroundColor: GLOBALS.COLORS.PDARK,
+    padding: 10
   }
 });
 
-export default Button;
+export { Button };

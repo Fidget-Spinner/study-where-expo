@@ -30,7 +30,7 @@ class Main extends Component {
       .then(snapshot => {
           const testValue = snapshot.val() || 'no value present';
           console.log('FIREBASEDEBUG1');
-          console.log(snapshot.val().toSTring, snapshot.val().test.lat);
+          console.log(snapshot.val().toString, snapshot.val().test.lat);
           console.log(testValue.key, testValue.value);
           this.setState({ testValue: snapshot.val().test.lat });
         })

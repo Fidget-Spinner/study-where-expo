@@ -5,10 +5,14 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { Card, Button, TextField, Toggle } from '../../common';
+import { Card, Button, TextField, Toggle, PopUp } from '../../common';
 import { GLOBALS } from '../../../Globals';
 
 class Debug extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { showModal: false };
+  }
   render() {
     return (
       <View style={styles.mainbackground}>
@@ -28,6 +32,15 @@ class Debug extends Component {
             </Text>
           </Button>
         </View>
+        <Button onPress={this.setState({ showModal: true })}>
+            <Text style={styles.word}>
+              SHOWMODAL
+            </Text>
+        </Button>
+        <PopUp
+          visible={this.state.showModal}
+          animationType='slide'
+        />
       </View>
     );
   }

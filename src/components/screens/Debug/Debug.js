@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { Card, Button, TextField } from '../../common';
+import { Card, Button, TextField, Toggle } from '../../common';
 import { GLOBALS } from '../../../Globals';
 
 class Debug extends Component {
@@ -17,6 +17,7 @@ class Debug extends Component {
             HI
           </Text>  
         </Card>
+        <Toggle />
         <View style={{ padding: 50, flexDirection: 'row' }}>
           <View style={{ flex: 1, backgroundColor: GLOBALS.COLORS.PRIMARY }}>
             <TextField style={{ flex: 1 }} label='password' />

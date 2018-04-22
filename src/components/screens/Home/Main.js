@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Platform,
+
   StyleSheet,
   Text,
   View,
@@ -9,12 +9,6 @@ import {
 //import firebase from 'firebase';
 import { Card } from '../../common/Card';
 //Main Page Component
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-  'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-  'Shake or press menu button for dev menu',
-});
 
 class Main extends Component {
 
@@ -53,9 +47,6 @@ class Main extends Component {
         <Text style={styles.instructions} >
           Firebase Debug: {this.state.testValue}
         </Text> */}
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
       </View>
     );
   }
@@ -63,20 +54,15 @@ class Main extends Component {
 
 const styles = StyleSheet.create({
   container: {
-  flex: 1,
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: '#F5FCFF',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-  fontSize: 20,
-  textAlign: 'center',
-  margin: 0,
-  },
-  instructions: {
-  textAlign: 'center',
-  color: '#333333',
-  marginBottom: 5,
+    welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 0,
   },
 });
 

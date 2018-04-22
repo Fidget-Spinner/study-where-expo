@@ -5,7 +5,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { Card, Button } from '../../common';
+import { Card, Button, TextField } from '../../common';
 import { GLOBALS } from '../../../Globals';
 
 class Debug extends Component {
@@ -17,11 +17,14 @@ class Debug extends Component {
             HI
           </Text>  
         </Card>
-        <Button onPress={() => console.log('BUTTONPRESS')}>
-          <Text>
-            Login
-          </Text>
-        </Button>
+        <View style={{ flexDirection: 'row' }}>
+          <TextField />
+          <Button onPress={() => console.log('LOGGEDIN', ...[TextField.value])}>
+            <Text style={styles.word}>
+              LOGIN
+            </Text>
+          </Button>
+        </View>
       </View>
     );
   }

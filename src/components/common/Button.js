@@ -11,14 +11,16 @@ class Button extends Component {
       };
   }
   onPressButton = () => {
-      //onPressButton is a function that is created with each
-      // button instance
-      this.setState({ pressed: true }); 
+      this.setState({ pressed: !this.state.pressed }); 
   }; 
   render() {
       return (
-          <View style={styles.container}>
-              <TouchableOpacity onPress={this.props.onPress}>
+          <View style={this.state.pressed ? styles.fcontainer : styles.tcontainer}>
+              <TouchableOpacity 
+              onPress={this.props.onPress}
+              onPressIn={this.onPressButton}
+              onPressOut={this.onPressButton}
+              >
                   <View>
                     {this.props.children}
                   </View> 
@@ -33,9 +35,13 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: GLOBALS.FONT.TEXT1, 
   },
-  container: {
+  tcontainer: {
     backgroundColor: GLOBALS.COLORS.PDARK,
     padding: 10
+  },
+  fcontainer: {
+    backgroundColor: GLOBALS.COLORS.PDARK,
+    padding: 15
   }
 });
 

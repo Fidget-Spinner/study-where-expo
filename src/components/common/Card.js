@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 const Card = (props) => {
   return (
-    <View style={{ backgroundColor: props.color, ...styles.container }}>
+    <View style={StyleSheet.flatten([{ backgroundColor: props.color }, styles.container])}>
       {props.children}
     </View>
   );

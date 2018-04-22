@@ -16,7 +16,7 @@ export const RootStack = TabNavigator(
       screen: GMap,
     },
     //comment out when not testing components on this screen
-    ComponentTester: {
+    Tester: {
       screen: Debug
     },
   },

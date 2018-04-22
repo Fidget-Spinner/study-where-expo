@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Modal, TouchableHighlight, Text } from 'react-native';
 
+//******** WIP *******
 class PopUp extends Component {
   constructor(props) {
     super(props);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, View, Text } from 'react-native';
+import { TextInput, View, Text, StyleSheet } from 'react-native';
 import { GLOBALS } from '../../Globals';
 
 const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
@@ -31,7 +31,7 @@ const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry })
     );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   input: {
     color: '#000',
     paddingRight: 5,
@@ -52,6 +52,6 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center'
   }
-};
+});
 
 export { TextField };

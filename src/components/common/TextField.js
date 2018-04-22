@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextInput, View, Text } from 'react-native';
+import { GLOBALS } from '../../Globals';
 
 const TextField = ({ label, value, onChangeText, placeholder, secureTextEntry }) => {
   // pass in props.label, this is in destructured form...
@@ -34,16 +35,16 @@ const styles = {
   input: {
     color: '#000',
     paddingRight: 5,
-    paddingLeft: 5,
     fontSize: 18,
     lineHeight: 23,
     flex: 2
   },
   labels: {
-    fontSize: 18,
-    paddingLeft: 20,
+    fontSize: 14,
+    padding: 10,
     flex: 1,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: GLOBALS.FONT.TEXT1
   },
   container: {
     height: 40,

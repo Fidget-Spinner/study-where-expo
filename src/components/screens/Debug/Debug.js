@@ -17,8 +17,10 @@ class Debug extends Component {
             HI
           </Text>  
         </Card>
-        <View style={{ flexDirection: 'row' }}>
-          <TextField />
+        <View style={{ padding: 50, flexDirection: 'row' }}>
+          <View style={{ flex: 1, backgroundColor: GLOBALS.COLORS.PRIMARY }}>
+            <TextField style={{ flex: 1 }} label='password' />
+          </View>
           <Button onPress={() => console.log('LOGGEDIN', ...[TextField.value])}>
             <Text style={styles.word}>
               LOGIN
